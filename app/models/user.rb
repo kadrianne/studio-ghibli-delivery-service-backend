@@ -1,2 +1,4 @@
-class User < ApplicationRecord
+class User < ApplicationRecord 
+    has_many :watched_movies 
+    has_many :unwatched_movies
 end

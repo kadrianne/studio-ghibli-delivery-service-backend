@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_24_193414) do
+ActiveRecord::Schema.define(version: 2020_03_24_200016) do
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 2020_03_24_193414) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "unwatched_movies", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "movie_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_id"], name: "index_unwatched_movies_on_movie_id"
+    t.index ["user_id"], name: "index_unwatched_movies_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "user_name"
     t.string "password"
@@ -30,4 +39,17 @@ ActiveRecord::Schema.define(version: 2020_03_24_193414) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "watched_movies", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "movie_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_id"], name: "index_watched_movies_on_movie_id"
+    t.index ["user_id"], name: "index_watched_movies_on_user_id"
+  end
+
+  add_foreign_key "unwatched_movies", "movies"
+  add_foreign_key "unwatched_movies", "users"
+  add_foreign_key "watched_movies", "movies"
+  add_foreign_key "watched_movies", "users"
 end
