@@ -52,14 +52,52 @@ titles = ["Castle in the Sky",
 
 def add_images(titles)
     i = 0
-    while i <= 1 do
+    while i <= 19 do
         found_movie = Movie.all.find_by(title: titles[i])
+
         case i
         when 0
-            found_movie.update(image: "https://resizing.flixster.com/j2TIEO5EJ2_OeQdAPyQxO9tVGUU=/206x305/v1.bTsxMTI5MjU3MDtqOzE4NDQ1OzEyMDA7MTQ5NzsxOTk2")
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/1476-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
         when 1
-            found_movie.update(image: "https://m.media-amazon.com/images/M/MV5BZmY2NjUzNDQtNTgxNC00M2Q4LTljOWQtMjNjNDBjNWUxNmJlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg")
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/1100-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
+        when 2
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/poster_my_neighbor_totoro-683x1024.jpg")
+        when 3
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/poster_kiki-683x1024.jpg")
+        when 4
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/1479-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
+        when 5
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/poster_porco_rosso-683x1024.jpg")
+        when 6
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/1482-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
+        when 7
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/1483-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
+        when 8
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/06/poster_mononoke-683x1024.jpg")
+        when 9
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/1484-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
+        when 10
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/1055-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
+        when 11
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/poster_cat_returns-683x1024.jpg")
+        when 12
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/2783-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
+        when 13
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/5845-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
+        when 14
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/14815-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
+        when 15
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/arrietty_poster-683x1024.jpg")
+        when 16
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/16933-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
+        when 17
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/poster_wind_rises-683x1024.jpg")
+        when 18
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/Isao-Takahata-and-His-Tale-of-the-Princess-Kaguya-683x1024.jpg")
+        when 19
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/22719-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
         end
+
         i+=1
     end
 end
