@@ -1,7 +1,8 @@
 class WatchedMoviesController < ApplicationController 
     def index 
         @watched_movies = WatchedMovie.all 
-        render json: @watched_movies
+        render json: @watched_movies, include: [{:user => {only: :user_name}, 
+            :movie => {only: :title}}]
     end 
 
     def create 
@@ -9,7 +10,6 @@ class WatchedMoviesController < ApplicationController
             user_id: params[:user_id],
             movie_id: params[:movie_id]
         ) 
-        render json: @watched_movie
     end 
 
     def destroy

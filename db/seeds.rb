@@ -9,6 +9,8 @@
 require 'rest-client'
 require 'pry'
 
+WatchedMovie.destroy_all
+UnwatchedMovie.destroy_all
 Movie.destroy_all
 User.destroy_all
 
@@ -106,3 +108,5 @@ end
 add_images(titles)
 
 User.create(user_name: "kristine", password:"123qwe")
+User.create(user_name: "todd", password:"123qwe")
+User.create(user_name: "denise", password:"123qwe")

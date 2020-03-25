@@ -1,7 +1,22 @@
 class UsersController < ApplicationController 
     def show 
         @user = User.find(params[:id]) 
-        render json: @user
+        render json: @user, include: {
+            :watched_movies => {
+                include: [{
+                    :movie => {
+                        only: :title
+                    }
+                }]
+            },
+            :unwatched_movies => {
+                include: [{
+                    :movie => {
+                        only: :title
+                    }
+                }]
+            }
+        }
     end 
 
     def create
