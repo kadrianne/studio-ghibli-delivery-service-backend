@@ -12,6 +12,12 @@ class UsersController < ApplicationController
         render json: @user 
     end
 
-    
+    def login
+        @user = User.find_by(
+            user_name: params[:name],
+            password: params[:password]
+        ) 
+        redirect_to "http://localhost:3001/movies.html?user_id=#{@user.id}"
+    end
 
 end
