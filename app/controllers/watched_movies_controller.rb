@@ -1,8 +1,7 @@
 class WatchedMoviesController < ApplicationController 
     def index 
         @watched_movies = WatchedMovie.all 
-        render json: @watched_movies, include: [{:user => {only: :user_name}, 
-            :movie => {only: :title}}]
+        render json: @watched_movies, include: [:user, :movie]
     end 
 
     def create 
