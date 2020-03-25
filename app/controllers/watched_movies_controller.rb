@@ -1,8 +1,7 @@
 class WatchedMoviesController < ApplicationController 
     def index 
         @watched_movies = WatchedMovie.all 
-        render json: @watched_movies, include: [{:user => {only: :user_name}, 
-            :movie => {only: :title}}]
+        render json: @watched_movies, include: [:user, :movie]
     end 
 
     def create 
@@ -10,6 +9,7 @@ class WatchedMoviesController < ApplicationController
             user_id: params[:user_id],
             movie_id: params[:movie_id]
         ) 
+        redirect_to "http://localhost:3001/profile.html?user_id=#{params[:user_id]}"
     end 
 
     def destroy
