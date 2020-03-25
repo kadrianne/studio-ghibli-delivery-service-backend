@@ -4,7 +4,19 @@ class UnwatchedMoviesController < ApplicationController
         render json: @unwatched_movies, include: [:user, :movie]
     end 
 
-    def create 
+    def create
+        @unwatched_movie = UnwatchedMovie.find_by(
+            user_id: params[:user_id],
+            movie_id: params[:movie_id]
+        ) 
+
+        if !@unwatched_movie
+            @unwatched_movie = UnwatchedMovie.create(
+                user_id: params[:user_id],
+                movie_id: params[:movie_id]
+            )
+        end
+
         @unwatched_movie = UnwatchedMovie.create(
             user_id: params[:user_id],
             movie_id: params[:movie_id]
