@@ -10,6 +10,7 @@ require 'rest-client'
 require 'pry'
 
 Movie.destroy_all
+User.destroy_all
 
 def get_movies
     response = RestClient.get("https://ghibliapi.herokuapp.com/films/")
@@ -103,3 +104,5 @@ def add_images(titles)
 end
 
 add_images(titles)
+
+User.create(user_name: "kristine", password:"123qwe")
