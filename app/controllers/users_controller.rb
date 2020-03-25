@@ -24,7 +24,7 @@ class UsersController < ApplicationController
             user_name: params[:user_name],
             password: params[:password]
         ) 
-        render json: @user 
+        redirect_to "http://localhost:3001/movies.html?user_id=#{@user.id}"
     end
 
     def login
