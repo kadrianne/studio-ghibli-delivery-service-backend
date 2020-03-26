@@ -38,7 +38,11 @@ class UsersController < ApplicationController
             user_name: params[:name],
             password: params[:password]
         ) 
-        redirect_to "http://localhost:3001/movies.html?user_id=#{@user.id}"
+        if @user
+            redirect_to "http://localhost:3001/movies.html?user_id=#{@user.id}"
+        else
+            redirect_to "http://localhost:3001"
+        end
     end
 
 end
