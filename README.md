@@ -1,24 +1,29 @@
-# README
+# Studio Ghibli's Delivery Service backend 
+This app will let a user look through Studio Ghibli movies and create their own lists. The user can choose which movies they have seen and add it to their 'Watched Movies List'. They can also watch trailers of any of the movies and add it to their 'Watch List' if they decide they want to see the movie. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## API Reference 
+https://ghibliapi.herokuapp.com 
+This API lists all of the Studio Ghibli films.
 
-Things you may want to cover:
+## Installation
+To begin fork and clone the repository from the github page.
+Then from the root directory use the following commands: 
+```
+bundle install 
+```
+```
+rails db:migrate
+```
+```
+rails db:seed
+```
+```
+rails s -p 3000
+```
+This will run start the backend process up. 
 
-* Ruby version
+## Next steps 
+To continue with the frontend follow this link https://github.com/kadrianne/studio-ghibli-delivery-service-frontend
 
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
