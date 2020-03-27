@@ -114,7 +114,7 @@ def add_images(titles)
             found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/poster_wind_rises-683x1024.jpg")
             found_movie.update(trailer: '<iframe width="560" height="315" src="https://www.youtube.com/embed/YrueAaw0RYg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
         when 18
-            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/Isao-Takahata-and-His-Tale-of-the-Princess-Kaguya-683x1024.jpg")
+            found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/18651-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
             found_movie.update(trailer: '<iframe width="560" height="315" src="https://www.youtube.com/embed/-NkRTHAgj2k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
         when 19
             found_movie.update(image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/22719-title-treatment-portrait-key-art-normal-medium-683x1024.jpg")
@@ -127,6 +127,22 @@ end
 
 add_images(titles)
 
-User.create(user_name: "kristine", password:"123qwe")
-User.create(user_name: "todd", password:"123qwe")
-User.create(user_name: "denise", password:"123qwe")
+Movie.create(
+    title: "Ocean Waves",
+    rating: 88,
+    summary: "At Kichijōji Station, Tokyo, Taku Morisaki glimpses a familiar woman on the platform opposite boarding a train. Later, her photo falls from a shelf as he exits his apartment before flying to Kōchi Prefecture. Picking it up, he looks at it briefly before leaving. As the aeroplane takes off he narrates the events that brought her into his life...",
+    director: "Tomomi Mochizuki",
+    release_date: 1993,
+    image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/15673-title-treatment-portrait-key-art-normal-medium-683x1024.jpg",
+    trailer: '<iframe width="560" height="315" src="https://www.youtube.com/embed/izyJ_NVyVaQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+)
+
+Movie.create(
+    title: "Nausicaä of the Valley of the Wind",
+    rating: 88,
+    summary: "Nausicaä, a gentle young princess, has an empathetic bond with the giant mutated insects that evolved in the wake of the destruction of the ecosystem. Traveling by cumbersome flying ship, on the backs of giant birds, and perched atop her beloved glider, Nausicaä and her allies must negotiate peace between kingdoms battling over the last of the world's precious natural resources.",
+    director: "Hayao Miyazaki",
+    release_date: 1984,
+    image: "https://www.studioghibli.com.au/wp-content/uploads/2017/07/1475-title-treatment-portrait-key-art-normal-medium-683x1024.jpg",
+    trailer: '<iframe width="560" height="315" src="https://www.youtube.com/embed/9bcsVzfiuf8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+)
