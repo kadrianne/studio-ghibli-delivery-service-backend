@@ -25,5 +25,7 @@ This will run start the backend process up.
 ## Next steps 
 To continue with the frontend follow this link https://github.com/kadrianne/studio-ghibli-delivery-service-frontend
 
-
-
+## Authors
+Denise Magner: https://github.com/deerenae<br>
+Todd Carlson: https://github.com/toddster79<br>
+Kristine Du: https://github.com/kadrianne
