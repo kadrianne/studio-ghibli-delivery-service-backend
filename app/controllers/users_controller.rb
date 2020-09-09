@@ -11,14 +11,14 @@ class UsersController < ApplicationController
             :watched_movies => {
                 include: [{
                     :movie => {
-                        only: :title
+                        only: [:title, :image]
                     }
                 }]
             },
             :unwatched_movies => {
                 include: [{
                     :movie => {
-                        only: :title
+                        only: [:title, :image]
                     }
                 }]
             }
